@@ -8,6 +8,7 @@
 struct Node {
     char num;
     std::vector<Node*> lil;
+    explicit Node(char num_ = '\0'): num(num_) {}
 };
 
 class Tree {
