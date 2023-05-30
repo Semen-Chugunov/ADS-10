@@ -14,7 +14,6 @@ class Tree {
  private:
     Node* root;
     std::vector<std::vector<char>> permutations;
-
     void createPerm(const std::vector<char>& posl) {
         addLil(root, posl);
         readTree(root, {});
@@ -40,7 +39,7 @@ class Tree {
             addLil(tm, updatedPosl);
         }
     }
-    public:
+ public:
      explicit Tree(const std::vector<char>& init):root(nullptr) {
          createPerm(init);
      }
