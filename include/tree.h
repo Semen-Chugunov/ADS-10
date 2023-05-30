@@ -29,22 +29,23 @@ class Tree {
     void addLil(Node* ptr, const std::vector<char>& posl) {
         if (ptr == nullptr) {
             root = ptr;
-            root = new Node; 
+            root = new Node;
         }
         for (char num : posl) {
             Node* tm = new Node(num);
             ptr->lil.push_back(tm);
             std::vector<char> updatedPosl(posl);
-            updatedPosl.erase(std::find(updatedPosl.begin(), updatedPosl.end(), num));
+            updatedPosl.erase \
+                (std::find(updatedPosl.begin(), updatedPosl.end(), num));
             addLil(tm, updatedPosl);
         }
     }
-   public:
-    explicit Tree(const std::vector<char>& init):root(nullptr) {
-        createPerm(init);
-    }
-    std::vector<std::vector<char>> getpermutations() const {
-        return permutations;
-    }
+    public:
+     explicit Tree(const std::vector<char>& init):root(nullptr) {
+         createPerm(init);
+     }
+     std::vector<std::vector<char>> getpermutations() const {
+         return permutations;
+     }
 };
 #endif  // INCLUDE_TREE_H_
