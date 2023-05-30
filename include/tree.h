@@ -39,6 +39,7 @@ class Tree {
             addLil(tm, updatedPosl);
         }
     }
+    
  public:
      explicit Tree(const std::vector<char>& init):root(nullptr) {
          createPerm(init);
